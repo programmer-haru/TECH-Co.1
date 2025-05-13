@@ -4,29 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タブメニュー</title>
+    <title>KANOA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <ul class="menu">
-            <li><a href="#" class="active" data-id="about">サイトの概要</a></li>
-            <li><a href="#" deta-id="service">サービスの内容</a></li>
-            <li><a href="#" deta-id="contact">お問い合わせ</a></li>
-        </ul>
+    <header>
+        <h1>KANOA</h1>
+    </header>
 
-        <section class="content active" id="about">
-            サイトの概要ですサイトの概要ですサイトの概要ですサイトの概要ですサイトの概要ですサイトの概要です
-        </section>
-        <section class="content" id="service">
-            サービスの内容サービスの内容サービスの内容サービスの内容サービスの内容サービスの内容サービスの内容
-        </section>
-        <section class="content" id="contact">
-            お問い合わせお問い合わせお問い合わせお問い合わせお問い合わせお問い合わせお問い合わせお問い合わせ
-        </section>
-    </div>
+    <main>
+        <section>
+            <div class="container">
+                <div class="item" data-id="web"><a href="#" class="active" >オリジナルWebサイト</a></div>
+                <div class="item" data-id="SNS"><a href="#" >SNSを運用する</a></div>
+                <div class="item" data-id="adv"><a href="#"  >広告を打つ</a></div>
+                <div class="item" data-id="com"><a href="#"  >事業を立ち上げる</a></div>
+            </div>
+            <div class="container">
+                <div class="content active" id="web">
+                    <h2>オリジナルWeb</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque reiciendis eveniet quibusdam
+                        architecto possimus, non et minus illum. Earum officiis itaque dolores dolorem nisi perferendis
+                        corrupti
+                        molestias, nam mollitia?
+                    </p>
+                    <!-- <iframe src="" frameborder="0"></iframe> -->
+                </div>
+                <div class="content" id="SNS">
+                    <h2>タイトル</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque reiciendis eveniet quibusdam
+                        architecto possimus, non et minus illum. Earum officiis itaque dolores dolorem nisi perferendis
+                        corrupti
+                        molestias, nam mollitia?
+                    </p>
+                    <!-- <iframe src="" frameborder="0"></iframe> -->
+                </div>
+                <div class="content" id="adv">
+                    <h2>問い合わせ</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque reiciendis eveniet quibusdam
+                        architecto possimus, non et minus illum. Earum officiis itaque dolores dolorem nisi perferendis
+                        corrupti
+                        molestias, nam mollitia?
+                    </p>
+                    <!-- <iframe src="" frameborder="0"></iframe> -->
+                </div>
+                <div class="content" id="com">
+                    <h2>カスタマー</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque reiciendis eveniet quibusdam
+                        architecto possimus, non et minus illum. Earum officiis itaque dolores dolorem nisi perferendis
+                        corrupti
+                        molestias, nam mollitia?
+                    </p>
+                    <!-- <iframe src="" frameborder="0"></iframe> -->
+                </div>
+            </div>
 
+        </section>
+
+    </main>
     <script src="main.js"></script>
 </body>
 

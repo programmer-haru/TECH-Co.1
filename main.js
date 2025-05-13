@@ -1,7 +1,6 @@
-"use strict";
-
+"use strict"
 {
-    const menuItems = document.querySelectorAll('.menu li a');
+    const menuItems = document.querySelectorAll('.item');
     const contents = document.querySelectorAll('.content');
 
     menuItems.forEach(clickedItem => {
