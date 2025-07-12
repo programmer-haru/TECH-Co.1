@@ -1,21 +1,7 @@
 "use strict"
-{
-    const menuItems = document.querySelectorAll('.item');
-    const contents = document.querySelectorAll('.content');
+  const toggle = document.getElementById('toggle');
+  const header = document.getElementById('header');
 
-    menuItems.forEach(clickedItem => {
-        clickedItem.addEventListener('click', e => {
-            e.preventDefault();
-
-            menuItems.forEach(item => {
-                item.classList.remove('active');
-            });
-            clickedItem.classList.add('active');
-
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-            document.getElementById(clickedItem.dataset.id).classList.add('active');
-        });
-    });
-}
+  toggle.addEventListener('click', () => {
+    header.classList.toggle('open');
+  });
