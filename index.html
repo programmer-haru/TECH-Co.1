@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,7 @@
 
 <body>
 
-  <!-- ===== Header（そのまま） ===== -->
+  <!-- ===== Header ===== -->
   <header class="header">
     <div class="brand">
       <div class="logo">P</div>
@@ -19,13 +20,30 @@
       </div>
     </div>
 
-    <nav>
+    <nav class="nav">
       <a href="#top">Top</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <!-- ハンバーガー -->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#top">Top</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <script src="menu.js"></script>
 
   <!-- ===== Main Visual ===== -->
   <section id="top" class="hero">
@@ -99,4 +117,5 @@
   </footer>
 
 </body>
+
 </html>
