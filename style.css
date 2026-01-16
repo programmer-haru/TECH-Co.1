@@ -4,6 +4,8 @@
   --brown: #6b4f3f;
   --text: #2e2a26;
   --muted: #7a6f66;
+  --green: #6f8f72;        /* くすみセージグリーン */
+  --green-light: #9fb6a2;  /* hover用 */
 }
 
 /* Reset */
@@ -17,6 +19,15 @@ body {
   color: var(--text);
   background: var(--beige);
   line-height: 1.7;
+}
+
+.section-title::after {
+  content: "";
+  width: 48px;
+  height: 2px;
+  background: var(--green);
+  display: block;
+  margin-top: 14px;
 }
 
 /* ===== Header ===== */
@@ -66,21 +77,58 @@ nav a {
   font-weight: 500;
 }
 
+nav a:hover {
+  color: var(--green);
+}
+
 /* ===== Hamburger ===== */
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 6px;
+  width: 32px;
+  height: 24px;
+  position: relative;
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 11;
 }
 
 .hamburger span {
-  width: 26px;
+  position: absolute;
+  left: 0;
+  width: 100%;
   height: 2px;
   background: var(--brown);
-  transition: 0.3s;
+  transition: 0.35s ease;
+}
+
+/* 3本線の初期位置 */
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* ===== × に変形 ===== */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: auto;
+  top: 11px;
 }
 
 /* ===== Mobile Menu ===== */
@@ -147,6 +195,15 @@ nav a {
   padding: 100px 0;
 }
 
+.section-title::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: var(--green);
+  display: block;
+  margin-top: 12px;
+}
+
 .section-inner {
   width: 100%;
   max-width: 1200px;
@@ -177,8 +234,9 @@ nav a {
 .about-image {
   width: 420px;
   height: 520px;
-  background: url("profile.jpg") center / cover no-repeat;
-  border-radius: 12px;
+  background: url("S__492421123.jpg") center / cover no-repeat;
+  border-radius: 50px;
+
 }
 
 .about-text {
@@ -198,7 +256,10 @@ nav a {
   padding: 32px;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid var(--green);
+  border-right: 3px solid var(--green);
 }
+
 
 /* ===== Contact ===== */
 .contact-buttons {
@@ -209,12 +270,19 @@ nav a {
 }
 
 .btn {
-  padding: 14px 28px;
-  border-radius: 999px;
-  background: var(--brown);
-  color: white;
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--green);
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background: var(--green-light);
 }
 
 /* ===== Footer ===== */
@@ -225,20 +293,7 @@ nav a {
   color: var(--muted);
 }
 
-/* ===== Responsive ===== */
-/* @media (max-width: 900px) {
-  .about {
-    flex-direction: column;
-  }
 
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-} */
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
@@ -249,7 +304,7 @@ nav a {
   }
 
   .hamburger {
-    display: flex;
+    display: block;
   }
 
   /* Hero */
